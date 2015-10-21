@@ -7,6 +7,11 @@ def get():
                         "--model-file",
                         type=str,
                         default=None)
+    parser.add_argument("-V",
+                        "--train-labels-csv-path",
+                        type=str,
+                        default="data/train/trainLabels.csv",
+                        help="This is needed b/c it acts as a list of what images are in the training set.")
     parser.add_argument("-d",
                         "--train-dataset",
                         type=str,
