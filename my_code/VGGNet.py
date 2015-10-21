@@ -58,6 +58,7 @@ class VGGNet(object):
         self.y_buffer = T.cast(theano.shared(self.y_buffer), 'int32')
         # validation set is not buffered
         valid_x, self.valid_y = self.ds.valid_set()
+        print valid_x.shape
         valid_x = theano.shared(lasagne.utils.floatX(valid_x))
         self.valid_y = T.cast(theano.shared(self.valid_y), 'int32')
         # network setup
